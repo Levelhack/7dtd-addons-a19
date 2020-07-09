@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+
+<!-- ******************** -->
+<!-- **** Motorcycle **** -->
+<!-- ******************** -->
+
+<!-- add 2 backseats -->
+<!--
+	<vehicle name="vehicleMotorcycle">
+...
+		<property class="seat0">
+			<property name="position" value="0, 0, -.201"/>
+			<property name="rotation" value="0, 0, 0"/>
+			<property name="exit" value="-.9,0,0 ~ .9,0,0 ~ 0,0,-1.5 ~ 0,0,1.6 ~ 0,1.5,0"/>
+		</property>
+-->
+	<append xpath="/vehicles/vehicle[@name='vehicleMotorcycle']">
+		<property class="seat1">
+			<property name="position" value="0, 0.17, -0.6"/>
+			<property name="rotation" value="0, 0, 0"/>
+			<property name="exit" value="-.9,0,0 ~ .9,0,0 ~ 0,0,-1.5 ~ 0,0,1.6 ~ 0,1.5,0"/>
+		</property>
+	</append>
+
+<!-- alternative backward facing seat position
+                        <property name="position" value="0, 0.17, -1.12"/>
+			<property name="rotation" value="-15, 180, 0"/>
+-->
+
+<!-- Debug by seat0 -->
+<!--	<setattribute xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@class='seat0']/property[@name='position']" name="value">0, 0.17, -0.6</setattribute>
+	<setattribute xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@class='seat0']/property[@name='rotation']" name="value">0, 0, 0</setattribute> -->
+
+<!-- ************* -->
+<!-- **** 4x4 **** -->
+<!-- ************* -->
+
+<!-- add 2 backseats -->
+<!--
+	<vehicle name="vehicle4x4Truck">
+...
+		<property class="seat0">
+			<property name="position" value="-.4, .36, .06"/>
+			<property name="rotation" value="-25, 0, 0"/>
+			<property name="exit" value="-1.6,0,0 ~ 1.6,0,-1 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+		</property>
+
+		<property class="seat1">
+			<property name="position" value=".4, .36, .06"/>
+			<property name="rotation" value="-25, 0, 0"/>
+			<property name="exit" value="1.6,0,0 ~ -1.6,0,-1 ~ .4,0,-2.8 ~ .4,0,2.6 ~ .4,2.1,0"/>
+		</property>
+-->
+	<append xpath="/vehicles/vehicle[@name='vehicle4x4Truck']">
+		<property class="seat2">
+			<property name="position" value="-.62, .53, -1.7"/>
+			<property name="rotation" value="-15, 270, 0"/>
+			<property name="exit" value="-1.6,0,0 ~ 1.6,0,-1 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+		</property>
+
+		<property class="seat3">
+			<property name="position" value=".62, .53, -1.7"/>
+			<property name="rotation" value="-15, 90, 0"/>
+			<property name="exit" value="1.6,0,0 ~ -1.6,0,-1 ~ .4,0,-2.8 ~ .4,0,2.6 ~ .4,2.1,0"/>
+		</property>
+	</append>
+<!-- Debug by seat0 -->
+<!--	<setattribute xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@class='seat0']/property[@name='position']" name="value">-.62, .53, -1.7</setattribute>
+	<setattribute xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@class='seat0']/property[@name='rotation']" name="value">-15, 270, 0</setattribute> -->
+</configs>
